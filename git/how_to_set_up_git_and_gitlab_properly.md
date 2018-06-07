@@ -27,7 +27,11 @@ receive any annoying prompts.
    $ cat ~/.ssh/id_rsa.pub   
 
    # If an SSH key pair does not exists, we can generate the key pair with the
-   # following command. Once you execute the command, you will be prompted to
+   # command: 
+   #
+   # ssh-keygen -t rsa -C "your.email@example.com" -b 4096
+   #
+   # Once you execute the command, you will be prompted to
    # input a file path to save the SSH key pair to. It is recommended to use
    # the suggested path. Afterward, you will be prompted for a password to
    # secure the SSH key pair.
@@ -48,8 +52,8 @@ receive any annoying prompts.
    the left, navigate to "SSH Keys". 
 
 3. Paste in your public SSH key that we obtained in the first step using `cat`
-   program and give your key a title that helps you remember what the key
-   represents. I usually name it after my machine name.
+   and give your key a title that helps you remember what the key represents.
+   I usually name it after my machine name.
 
 4. In terminal:
    ```bash
@@ -57,7 +61,7 @@ receive any annoying prompts.
    $ pwd
    /path/to/hello-ssh   
 
-   # Note that the remote URL of the Git project is still using a HTTPS.
+   # Note that the remote URL of the Git project is still using an HTTPS URL.
    $ git remote -v
    origin  https://github.com/aaronang/hello-ssh.git (fetch)
    origin  https://github.com/aaronang/hello-ssh.git (push)   

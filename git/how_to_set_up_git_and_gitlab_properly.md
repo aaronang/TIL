@@ -1,4 +1,4 @@
-# Setting up Git and GitLab "properly"
+# How to set up Git and GitLab "properly"
 
 What do I mean with "properly"? Every time we use `git clone`, `git fetch`, `git
 pull`, or `git push`, Git prompts for a username and password. This is annoying.

@@ -7,19 +7,19 @@ URL instead of the SSH URL. In this mini-tutorial, we will go through the
 necessary steps to set up Git and GitLab "properly" such that we no longer
 receive any annoying prompts.
 
-In this mini-tutorial, we assume that we are working on a project called "til".
 
 1. In terminal:
    ```bash
-   # The current working directory.
+   # In this mini-tutorial, we assume that we are working on a project called
+   # "hello-ssh". The current working directory.
    $ pwd
-   /path/to/til   
+   /path/to/hello-ssh   
 
    # Note that the remote URL is HTTPS, this causes the annoying prompts. To
    # use the SSH URL, we first need to generate a new SSH key pair.
    $ git remote -v
-   origin  https://github.com/aaronang/til.git (fetch)
-   origin  https://github.com/aaronang/til.git (push)   
+   origin  https://github.com/aaronang/hello-ssh.git (fetch)
+   origin  https://github.com/aaronang/hello-ssh.git (push)   
 
    # Let's first check if an SSH key pair exists. If the following command
    # outputs a string that starts with `ssh-rsa` you can skip the steps to
@@ -55,12 +55,12 @@ In this mini-tutorial, we assume that we are working on a project called "til".
    ```bash
    # The current working directory.
    $ pwd
-   /path/to/til   
+   /path/to/hello-ssh   
 
    # Note that the remote URL of the Git project is still using a HTTPS.
    $ git remote -v
-   origin  https://github.com/aaronang/til.git (fetch)
-   origin  https://github.com/aaronang/til.git (push)   
+   origin  https://github.com/aaronang/hello-ssh.git (fetch)
+   origin  https://github.com/aaronang/hello-ssh.git (push)   
 
    # We can change the remote URL using the command:
    # 
@@ -68,6 +68,17 @@ In this mini-tutorial, we assume that we are working on a project called "til".
    #
    # Note: the SSH URL can be found on the project page on GitLab, see
    # screenshot below.
-   $ git remote set-url origin git@github.com:aaronang/til.git
+   $ git remote set-url origin git@github.com:aaronang/hello-ssh.git
+
+   $ git remote -v
+   origin  git@github.com:aaronang/hello-ssh.git (fetch)
+   origin  git@github.com:aaronang/hello-ssh.git (push)  
    ```
    ![](/git/img/ssh.png)
+
+After you have performed all the steps, you will no longer be prompted for username and password when using `git clone`, `git fetch`, `git pull`, or `git push` :tada:
+
+## Resources
+
+1. [GitLab and SSH keys](https://docs.gitlab.com/ee/ssh/)
+2. [Which remote URL should I use?](https://help.github.com/articles/which-remote-url-should-i-use/)
